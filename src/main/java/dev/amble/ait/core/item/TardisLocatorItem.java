@@ -133,7 +133,6 @@ public class TardisLocatorItem extends LinkableItem implements ArtronHolderItem 
                             .append(Text.literal("( ").formatted(Formatting.BLUE))
                             .append(Text.literal(nbt.getDouble(FUEL_KEY) + " / 500")).formatted(Formatting.YELLOW)
                             .append(Text.literal(" )").formatted(Formatting.BLUE))
-
                             , true);
                     world.playSound(null, user.getBlockPos(), AITSounds.BLIP_FAIL, SoundCategory.PLAYERS, 0.75f, 1);
                     return TypedActionResult.fail(user.getStackInHand(hand));
