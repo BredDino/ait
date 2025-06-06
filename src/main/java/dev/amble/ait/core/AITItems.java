@@ -208,7 +208,7 @@ public class AITItems extends ItemContainer {
             new AItemSettings().maxCount(1).rarity(Rarity.RARE), 315);
 
     @NoEnglish
-    public static final Item TARDIS_LOCATOR = new TardisLocatorItem(new AItemSettings().group(AITItemGroups.MAIN).maxCount(1).rarity(Rarity.RARE));
+    public static final Item TARDIS_LOCATOR = new TardisLocatorItem(new AItemSettings().group(AITItemGroups.MAIN).maxCount(1).rarity(Rarity.RARE), true);
 
 
 

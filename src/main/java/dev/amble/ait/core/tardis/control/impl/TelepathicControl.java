@@ -6,10 +6,7 @@ import dev.amble.ait.core.AITItems;
 import dev.amble.ait.core.AITSounds;
 import dev.amble.ait.core.advancement.TardisCriterions;
 import dev.amble.ait.core.drinks.DrinkUtil;
-import dev.amble.ait.core.item.HandlesItem;
-import dev.amble.ait.core.item.HypercubeItem;
-import dev.amble.ait.core.item.KeyItem;
-import dev.amble.ait.core.item.SonicItem;
+import dev.amble.ait.core.item.*;
 import dev.amble.ait.core.likes.ItemOpinion;
 import dev.amble.ait.core.likes.ItemOpinionRegistry;
 import dev.amble.ait.core.lock.LockedDimensionRegistry;
@@ -70,6 +67,10 @@ public class TelepathicControl extends Control {
         ItemStack held = player.getMainHandStack();
         Item type = held.getItem();
 
+        if (type == AITItems.TARDIS_LOCATOR) {
+
+        }
+
         if (type == Items.BRICK) {
             tardis.siege().texture().set(SiegeHandler.BRICK_TEXTURE);
             return Result.FAILURE;
@@ -93,6 +94,10 @@ public class TelepathicControl extends Control {
         if (type instanceof LinkableItem linker) {
             if (linker instanceof SonicItem || linker instanceof HandlesItem)
                 return Result.FAILURE;
+
+            if (type instanceof TardisLocatorItem) {
+                held.getOrCreateNbt().putDouble("fuel", 1000);
+            }
 
             linker.link(held, tardis);
             world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_AMETHYST_BLOCK_RESONATE, SoundCategory.BLOCKS,

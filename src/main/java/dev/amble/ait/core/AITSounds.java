@@ -269,6 +269,9 @@ public class AITSounds {
     public static final SoundEvent SILVER_STOMP_LOOP = register("mobs/cybermen/nightmare/silver_stomp_loop");
     public static final SoundEvent SILVER_STOMP_START_FINISH = register("mobs/cybermen/nightmare/silver_stomp_start_finish");
 
+    public static final SoundEvent BLIP = register("blip");
+    public static final SoundEvent BLIP_FAIL = register("blip_fail");
+
 
 
     public static void init() {
