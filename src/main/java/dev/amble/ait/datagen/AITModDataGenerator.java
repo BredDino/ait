@@ -1176,6 +1176,8 @@ public class AITModDataGenerator implements DataGeneratorEntrypoint {
         provider.addTranslation("sonic.ait.mode.overload", "OVERLOAD");
         provider.addTranslation("sonic.ait.mode.scanning", "SCANNING");
 
+        provider.addTranslation(AITItems.TARDIS_LOCATOR, "Tardis Locator");
+
         // Effects
         provider.addTranslation("effect.air.lunar_sickness", "Lunar Sickness");
 
