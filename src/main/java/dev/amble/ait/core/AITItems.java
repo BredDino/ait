@@ -207,6 +207,10 @@ public class AITItems extends ItemContainer {
     public static final Item EARTH_MUSIC_DISC = new MusicDiscItem(1, AITSounds.EARTH_MUSIC,
             new AItemSettings().maxCount(1).rarity(Rarity.RARE), 315);
 
+    @NoEnglish
+    public static final Item TARDIS_LOCATOR = new TardisLocatorItem(new AItemSettings().group(AITItemGroups.MAIN).maxCount(1).rarity(Rarity.RARE));
+
+
 
     // Block controls
 
